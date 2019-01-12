@@ -1,0 +1,19 @@
+:root {
+  --typeface: "Inter UI";
+  --system-ui: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --cosmos-brand: #161931;
+  --cosmos-brand-transparent: rgba(22, 25, 49, 0.32);
+  --green: #07ef9a;
+  --cosmos-brand-light: #5e6ff3;
+  --blue: #0e3ff2;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-extrabold: 800;
+  --weight-black: 900;
+}
+
+body {
+  font-family: var(--typeface), var(--system-ui);
+}

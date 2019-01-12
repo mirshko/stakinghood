@@ -1,0 +1,9 @@
+.container {
+  display: grid;
+  justify-items: center;
+}
+
+.wrapper {
+  max-width: 480px;
+  width: 100%;
+}
