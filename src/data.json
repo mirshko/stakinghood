@@ -1,0 +1,42 @@
+{
+  "staked": [
+    {
+      "symbol": "MYTH",
+      "name": "Mythos Capital",
+      "color": "#000",
+      "emoji": "🔒",
+      "totalStake": 350000,
+      "bondedStake": 15575,
+      "uptime": 100.0
+    },
+    {
+      "symbol": "SATO",
+      "name": "Satoshi-Ledger",
+      "color": "#07EF9A",
+      "emoji": "🦄",
+      "totalStake": 150000,
+      "bondedStake": 5000,
+      "uptime": 99.99
+    }
+  ],
+  "watched": [
+    {
+      "symbol": "PRTY",
+      "name": "Party",
+      "color": "#0E3FF2",
+      "emoji": "🎉",
+      "totalStake": 250000,
+      "bondedStake": 0,
+      "uptime": 99.999
+    },
+    {
+      "symbol": "CCCP",
+      "name": "CCCP",
+      "color": "#605763",
+      "emoji": "🛠",
+      "totalStake": 120000,
+      "bondedStake": 0,
+      "uptime": 98.99
+    }
+  ]
+}

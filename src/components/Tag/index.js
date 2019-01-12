@@ -9,12 +9,12 @@ const Box = styled(RebassBox)`
   text-transform: uppercase;
   letter-spacing: 0.64px;
   font-weight: var(--weight-medium);
-  height: 24px;
+  height: ${props => (props.tall ? "30px" : "24px")};
   padding: 1px 8px 0;
 `;
 
 const Tag = props => (
-  <Box bg="var(--cosmos-brand)" color="white" {...props} fontSize={2}>
+  <Box bg="var(--brand)" color="white" {...props} fontSize={2}>
     {props.children}
   </Box>
 );
