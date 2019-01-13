@@ -4,3 +4,11 @@
   cursor: pointer;
   width: 100%;
 }
+
+.button:hover > * {
+  opacity: 0.64;
+}
+
+.button > * {
+  transition: opacity 0.125s ease;
+}
