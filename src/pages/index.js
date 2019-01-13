@@ -132,7 +132,7 @@ class Index extends React.Component {
               </Panel>
             </Layout>,
             this.state.modalOpen && (
-              <Modal key={1} onClose={() => this.closeModal()}>
+              <Modal key={1} onClick={() => this.closeModal()}>
                 <StakeAdjustor index={this.state.activeIndex} />
               </Modal>
             )

@@ -9,11 +9,11 @@ import "@reach/dialog/styles.css";
 import "./index.css";
 import Uppercase from "../Uppercase";
 
-const Modal = ({ children, onClose }) => (
+const Modal = ({ children, onClick }) => (
   <Dialog>
     {children}
     <Flex justifyContent="center" alignItems="center" pb={3}>
-      <UnstyledButton width="initial" onClick={onClose}>
+      <UnstyledButton width="initial" onClick={onClick}>
         <Uppercase color="var(--brand)">Close</Uppercase>
       </UnstyledButton>
     </Flex>
@@ -22,7 +22,7 @@ const Modal = ({ children, onClose }) => (
 
 Modal.propTypes = {
   children: PropTypes.node.isRequired,
-  onClose: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired
 };
 
 export default Modal;
