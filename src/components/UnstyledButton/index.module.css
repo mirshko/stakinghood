@@ -1,0 +1,6 @@
+.button {
+  all: unset;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+}

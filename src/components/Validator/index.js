@@ -45,6 +45,7 @@ const Validator = ({
       <ValidatorIcon bg={color}>{emoji}</ValidatorIcon>
       <RebassBox ml="8px">
         <Text
+          title={name}
           lineHeight="24px"
           fontSize="16px"
           fontWeight="var(--weight-medium)"
@@ -70,7 +71,7 @@ Validator.defaultProps = {
 
 Validator.propTypes = {
   symbol: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   color: PropTypes.string,
   emoji: PropTypes.string,
   totalStake: PropTypes.number.isRequired,
