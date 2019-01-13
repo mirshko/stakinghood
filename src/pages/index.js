@@ -14,9 +14,10 @@ import Modal from "../components/Modal";
 import EmptyState from "../components/EmptyState";
 
 const ATOMUSDValue = 5;
-
 const findIndexBySymbol = (arr, symbol) =>
   arr.findIndex(i => i.symbol === symbol);
+const uptimeAsc = (a, b) => a.uptime - b.uptime;
+const bondedStakeAsc = (a, b) => b.bondedStake - a.bondedStake;
 
 class Index extends React.Component {
   state = {
@@ -34,11 +35,11 @@ class Index extends React.Component {
         {app => {
           const watchedValidators = app.state.validators
             .filter(validator => validator.bondedStake <= 0)
-            .sort((val1, val2) => val1.uptime + val2.uptime);
+            .sort(uptimeAsc);
 
-          const stakedValidators = app.state.validators.filter(
-            validator => validator.bondedStake > 0
-          );
+          const stakedValidators = app.state.validators
+            .filter(validator => validator.bondedStake > 0)
+            .sort(bondedStakeAsc);
 
           const stakeValue = (
             app.state.validators
@@ -50,7 +51,7 @@ class Index extends React.Component {
             <Layout>
               <SEO />
               <Panel>
-                <Heading mt={[0, 4]} mb="4px" fontSize={[4, 5]} as="h1">
+                <Heading mt={4} mb="4px" fontSize={[4, 5]} as="h1">
                   Staking
                 </Heading>
 

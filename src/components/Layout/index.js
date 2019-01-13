@@ -11,6 +11,7 @@ import Theme from "../Theme";
 const Container = styled.div`
   display: grid;
   justify-items: center;
+  min-height: 100vh;
 `;
 
 const Wrapper = styled.div`

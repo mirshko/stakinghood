@@ -19,3 +19,7 @@
 body {
   font-family: var(--typeface), var(--system-ui);
 }
+
+html {
+  background-color: #f5f6f9;
+}

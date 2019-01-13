@@ -2,9 +2,16 @@
   padding: 0;
   max-width: 480px;
   width: 100%;
+  border-radius: 8px;
+  box-shadow: rgba(94, 111, 243, 0.16) 0px 48px 80px,
+    rgba(22, 25, 49, 0.16) 0px 16px 32px, rgba(22, 25, 49, 0.08) 0px 6px 16px;
 }
 
 @media only screen and (max-width: 40rem) {
   [data-reach-dialog-content] {
+    bottom: 0;
+    position: absolute;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0;
   }
 }
