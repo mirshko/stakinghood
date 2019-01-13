@@ -145,9 +145,7 @@ const StakeAdjustor = ({ index }) => {
                 onSubmit={e => {
                   e.preventDefault();
 
-                  app.incrementLiquidStake(
-                    parseInt(withdrawInput.value, 10)
-                  );
+                  app.incrementLiquidStake(parseInt(withdrawInput.value, 10));
                   app.decreaseValidatorStake(
                     index,
                     parseInt(withdrawInput.value, 10)
@@ -172,8 +170,7 @@ const StakeAdjustor = ({ index }) => {
                       : false
                   }
                 >
-                  {withdrawInput.value >
-                  app.state.validators[index].bondedStake
+                  {withdrawInput.value > app.state.validators[index].bondedStake
                     ? "Insufficient Bonded Stake"
                     : "Widthdraw Stake"}
                 </Button>
