@@ -2,9 +2,18 @@ import React from "react";
 import styled from "styled-components";
 
 const Button = styled.button`
-  all: unset;
-  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  appearance: none;
+  background: none;
+  display: inline-block;
+  outline: none;
+  text-align: inherit;
   cursor: pointer;
+
   width: ${props => (props.width ? props.width : "100%")};
 
   & > * {
@@ -14,10 +23,6 @@ const Button = styled.button`
   &:hover > * {
     opacity: 0.64;
   }
-
-  // &:focus {
-  //   outline: -webkit-focus-ring-color auto 5px;
-  // }
 `;
 
 const UnstyledButton = ({ onClick, children, width }) => (
