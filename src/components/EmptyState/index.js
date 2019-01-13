@@ -1,5 +1,6 @@
 import React from "react";
 import { Text } from "rebass";
+import PropTypes from "prop-types";
 
 const EmptyState = ({ children }) => (
   <Text
@@ -11,5 +12,9 @@ const EmptyState = ({ children }) => (
     {children}
   </Text>
 );
+
+EmptyState.propTypes = {
+  children: PropTypes.node.isRequired
+};
 
 export default EmptyState;
