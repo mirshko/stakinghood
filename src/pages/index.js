@@ -16,7 +16,7 @@ import EmptyState from "../components/EmptyState";
 const ATOMUSDValue = 5;
 const findIndexBySymbol = (arr, symbol) =>
   arr.findIndex(i => i.symbol === symbol);
-const uptimeAsc = (a, b) => a.uptime - b.uptime;
+const uptimeAsc = (a, b) => b.uptime - a.uptime;
 const bondedStakeAsc = (a, b) => b.bondedStake - a.bondedStake;
 
 class Index extends React.Component {
