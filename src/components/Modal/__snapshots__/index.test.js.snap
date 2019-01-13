@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Modal /> it works 1`] = `
+<Dialog>
+  <p>
+    Children
+  </p>
+  <Styled(styled.div)
+    alignItems="center"
+    justifyContent="center"
+    pb={3}
+  >
+    <UnstyledButton
+      onClick={[Function]}
+      width="initial"
+    >
+      <Styled(Styled(styled.div))
+        color="var(--brand)"
+      >
+        Close
+      </Styled(Styled(styled.div))>
+    </UnstyledButton>
+  </Styled(styled.div)>
+</Dialog>
+`;

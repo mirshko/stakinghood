@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Layout /> it works 1`] = `
+<Theme>
+  <styled.div>
+    <styled.div>
+      <p>
+        Children
+      </p>
+    </styled.div>
+  </styled.div>
+</Theme>
+`;

@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tag /> it works 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-htoDjs",
+        "isStatic": false,
+        "rules": Array [
+          "box-sizing: border-box;",
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          "
+  align-items: center;
+  border-radius: 5px;
+  display: inline-flex;
+  text-transform: uppercase;
+  letter-spacing: 0.64px;
+  font-size: 16px;
+  background-color: var(--brand);
+  font-weight: var(--weight-medium);
+  height: ",
+          [Function],
+          ";
+  padding: 1px 8px 0;
+  color: #fff;
+",
+        ],
+      },
+      "displayName": "Styled(Styled(styled.div))",
+      "foldedComponentIds": Array [
+        "sc-bdVaJa",
+        "sc-htpNat",
+      ],
+      "propTypes": Object {
+        "fontFamily": [Function],
+        "fontWeight": [Function],
+        "letterSpacing": [Function],
+        "lineHeight": [Function],
+        "textAlign": [Function],
+      },
+      "render": [Function],
+      "styledComponentId": "sc-htoDjs",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;

@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Panel /> it works 1`] = `
+<Styled(styled.div)
+  bg="#F5F6F9"
+  borderRadius={
+    Array [
+      0,
+      24,
+    ]
+  }
+  boxShadow={
+    Array [
+      "none",
+      "rgba(94, 111, 243, 0.16) 0px 48px 80px,
+  rgba(22, 25, 49, 0.16) 0px 16px 32px, rgba(22, 25, 49, 0.08) 0px 6px 16px",
+    ]
+  }
+  mb={
+    Array [
+      0,
+      128,
+    ]
+  }
+  mt={
+    Array [
+      0,
+      32,
+    ]
+  }
+  style={
+    Object {
+      "overflow": "hidden",
+    }
+  }
+>
+  <styled.div
+    bg="white"
+    mb={10}
+    pb={10}
+    pt={20}
+    px={20}
+  >
+    <p>
+      Children
+    </p>
+  </styled.div>
+  <PseudoPanel
+    height={40}
+  />
+  <PseudoPanel
+    height={96}
+  />
+</Styled(styled.div)>
+`;

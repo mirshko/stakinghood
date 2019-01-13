@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmptyState /> renders the passed in text 1`] = `
+<Styled(styled.div)
+  color="var(--brand-opaque)"
+  fontSize={
+    Array [
+      1,
+      2,
+    ]
+  }
+  py={20}
+  textAlign="center"
+>
+  Text
+</Styled(styled.div)>
+`;

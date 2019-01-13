@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> it works 1`] = `
+<StyledComponent
+  as="button"
+  bg="blue"
+  border={0}
+  borderRadius={4}
+  color="white"
+  fontSize="inherit"
+  fontWeight="bold"
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-htoDjs",
+        "isStatic": false,
+        "rules": Array [
+          "box-sizing: border-box;",
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          "appearance: none; display: inline-block; text-align: center; line-height: inherit; text-decoration: none;",
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          "
+  cursor: pointer;
+  padding: 12px 0;
+  font-weight: var(--weight-medium);
+  background-color: var(--brand);
+  transition-property: color, background-color;
+  transition-timing-function: ease;
+  transition-duration: 0.25s;
+
+  &[disabled],
+  &[disabled]:hover {
+    cursor: not-allowed;
+    color: var(--brand);
+    background-color: var(--brand-light);
+  }
+
+  &:hover {
+    background-color: var(--brand-hover);
+  }
+",
+        ],
+      },
+      "defaultProps": Object {
+        "as": "button",
+        "bg": "blue",
+        "border": 0,
+        "borderRadius": 4,
+        "color": "white",
+        "fontSize": "inherit",
+        "fontWeight": "bold",
+        "m": 0,
+        "px": 3,
+        "py": 2,
+      },
+      "displayName": "Styled(Styled(styled.div))",
+      "foldedComponentIds": Array [
+        "sc-bdVaJa",
+        "sc-EHOje",
+      ],
+      "propTypes": Object {
+        "border": [Function],
+        "borderBottom": [Function],
+        "borderColor": [Function],
+        "borderLeft": [Function],
+        "borderRadius": [Function],
+        "borderRight": [Function],
+        "borderTop": [Function],
+        "fontWeight": [Function],
+        "variant": [Function],
+      },
+      "render": [Function],
+      "styledComponentId": "sc-htoDjs",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  m={0}
+  px={3}
+  py={2}
+/>
+`;

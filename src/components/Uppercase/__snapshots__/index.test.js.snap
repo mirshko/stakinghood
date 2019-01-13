@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Uppercase /> it works 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-htoDjs",
+        "isStatic": false,
+        "rules": Array [
+          "box-sizing: border-box;",
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+          "
+  text-transform: uppercase;
+  color: ",
+          [Function],
+          ";
+  letter-spacing: 0.32px;
+  font-weight: var(--weight-semibold);
+",
+        ],
+      },
+      "displayName": "Styled(Styled(styled.div))",
+      "foldedComponentIds": Array [
+        "sc-bdVaJa",
+        "sc-htpNat",
+      ],
+      "propTypes": Object {
+        "fontFamily": [Function],
+        "fontWeight": [Function],
+        "letterSpacing": [Function],
+        "lineHeight": [Function],
+        "textAlign": [Function],
+      },
+      "render": [Function],
+      "styledComponentId": "sc-htoDjs",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;

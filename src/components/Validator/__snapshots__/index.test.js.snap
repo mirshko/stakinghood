@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Validator /> it works 1`] = `
+<UnstyledButton
+  onClick={[Function]}
+>
+  <Styled(Styled(styled.div))
+    alignItems="center"
+    bottomBorder={true}
+    justifyContent="space-between"
+    pb={19}
+    pt={20}
+  >
+    <Styled(styled.div)>
+      <Styled(styled.div)
+        bg="#000"
+      >
+        🔒
+      </Styled(styled.div)>
+      <styled.div
+        ml="8px"
+      >
+        <Styled(styled.div)
+          fontSize="16px"
+          fontWeight="var(--weight-medium)"
+          lineHeight="24px"
+          title="Mythos Capital"
+        >
+          MYTH
+        </Styled(styled.div)>
+        <Styled(styled.div)
+          fontSize="12px"
+          lineHeight="12px"
+        >
+          365.6K
+           ATOM
+        </Styled(styled.div)>
+      </styled.div>
+    </Styled(styled.div)>
+    <Styled(Styled(styled.div))
+      tall={true}
+    >
+      15.6K ATOM
+    </Styled(Styled(styled.div))>
+  </Styled(Styled(styled.div))>
+</UnstyledButton>
+`;
