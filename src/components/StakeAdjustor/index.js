@@ -1,74 +1,13 @@
 import React, { useState } from "react";
 import { Subscribe } from "unstated";
-import styled from "styled-components";
-import { Flex, Text, Box, Button as RebassButton } from "rebass";
+import { Flex, Text } from "rebass";
 import { useInput } from "react-hanger";
+import PropTypes from "prop-types";
 
 import StateContainer from "../StateContainer";
-import UnstyledButton from "../UnstyledButton";
-
-const Button = styled(RebassButton)`
-  cursor: pointer;
-  padding: 12px 0;
-  font-weight: var(--weight-medium);
-  background-color: var(--brand);
-  transition-property: color, background-color;
-  transition-timing-function: ease;
-  transition-duration: 0.25s;
-
-  &[disabled],
-  &[disabled]:hover {
-    cursor: not-allowed;
-    color: var(--brand);
-    background-color: var(--brand-light);
-  }
-
-  &:hover {
-    background-color: var(--brand-hover);
-  }
-`;
-
-const Input = styled.input`
-  width: 100%;
-  margin: 24px 0;
-  padding: 12px 16px;
-  border-radius: 4px;
-  border: none;
-  line-height: 1.5;
-  font-size: 16px;
-  background-color: var(--brand-light);
-  color: #000;
-
-  ::placeholder {
-    color: #000;
-  }
-`;
-
-const TabContent = props => (
-  <Box px={[3, 4]} pt={[3, 4]} pb={3} {...props}>
-    {props.children}
-  </Box>
-);
-
-const Tab = ({ active, onClick, children }) => {
-  const activeColor = active ? "var(--brand)" : "transparent";
-
-  return (
-    <UnstyledButton disabled={active} onClick={onClick}>
-      <Text
-        pt={3}
-        pb={16 - 2}
-        fontWeight="var(--weight-semibold)"
-        textAlign="center"
-        style={{
-          borderBottom: `2px solid ${activeColor}`
-        }}
-      >
-        {children}
-      </Text>
-    </UnstyledButton>
-  );
-};
+import Button from "../Button";
+import { Tab, TabContent } from "../Tabs";
+import Input from "../Input";
 
 const StakeAdjustor = ({ index }) => {
   const supplyInput = useInput(0);
@@ -181,6 +120,10 @@ const StakeAdjustor = ({ index }) => {
       )}
     </Subscribe>
   );
+};
+
+StakeAdjustor.propTypes = {
+  index: PropTypes.number.isRequired
 };
 
 export default StakeAdjustor;

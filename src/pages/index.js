@@ -48,7 +48,7 @@ class Index extends React.Component {
           ).toLocaleString(undefined, { minimumFractionDigits: 2 });
 
           return [
-            <Layout>
+            <Layout key={0}>
               <SEO />
               <Panel>
                 <Heading mt={4} mb="4px" fontSize={[4, 5]} as="h1">
@@ -132,7 +132,7 @@ class Index extends React.Component {
               </Panel>
             </Layout>,
             this.state.modalOpen && (
-              <Modal onClose={() => this.closeModal()}>
+              <Modal key={1} onClose={() => this.closeModal()}>
                 <StakeAdjustor index={this.state.activeIndex} />
               </Modal>
             )

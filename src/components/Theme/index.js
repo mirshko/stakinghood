@@ -1,5 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
+import PropTypes from "prop-types";
 
 const theme = {
   Heading: {
@@ -7,6 +8,12 @@ const theme = {
   }
 };
 
-export default props => (
-  <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
+const Theme = ({ children }) => (
+  <ThemeProvider theme={theme}>{children}</ThemeProvider>
 );
+
+Theme.propTypes = {
+  children: PropTypes.node.isRequired
+};
+
+export default Theme;
