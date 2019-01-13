@@ -1,18 +1,28 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 
 import "modern-normalize";
 import "typeface-inter";
 import "../../styles/global.css";
 
-import styles from "./index.module.css";
 import Theme from "../Theme";
+
+const Container = styled.div`
+  display: grid;
+  justify-items: center;
+`;
+
+const Wrapper = styled.div`
+  max-width: 400px;
+  width: 100%;
+`;
 
 const Layout = ({ children }) => (
   <Theme>
-    <div className={styles.container}>
-      <div className={styles.wrapper}>{children}</div>
-    </div>
+    <Container>
+      <Wrapper>{children}</Wrapper>
+    </Container>
   </Theme>
 );
 

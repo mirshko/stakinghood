@@ -2,7 +2,7 @@ import { Container } from "unstated";
 
 import data from "../../data.json";
 
-class StakingContainer extends Container {
+class StateContainer extends Container {
   state = {
     liquidStake: 10843,
     validators: data
@@ -24,6 +24,7 @@ class StakingContainer extends Container {
     let validators = [...this.state.validators];
 
     validators[index].bondedStake += amount;
+    validators[index].totalStake += amount;
 
     this.setState({ validators });
   }
@@ -32,9 +33,10 @@ class StakingContainer extends Container {
     let validators = [...this.state.validators];
 
     validators[index].bondedStake -= amount;
+    validators[index].totalStake -= amount;
 
     this.setState({ validators });
   }
 }
 
-export default StakingContainer;
+export default StateContainer;

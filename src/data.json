@@ -4,18 +4,18 @@
     "name": "Mythos Capital",
     "color": "#000",
     "emoji": "🔒",
-    "totalStake": 350000,
+    "totalStake": 365575,
     "bondedStake": 15575,
-    "uptime": 100.0
+    "uptime": 100.00
   },
   {
     "symbol": "SATO",
     "name": "Satoshi-Ledger",
     "color": "#07EF9A",
     "emoji": "🦄",
-    "totalStake": 150000,
+    "totalStake": 155000,
     "bondedStake": 5000,
-    "uptime": 99.99
+    "uptime": 99.999
   },
   {
     "symbol": "PRTY",
@@ -24,7 +24,7 @@
     "emoji": "🎉",
     "totalStake": 250000,
     "bondedStake": 0,
-    "uptime": 99.999
+    "uptime": 98.99
   },
   {
     "symbol": "CCCP",
@@ -33,6 +33,6 @@
     "emoji": "🛠",
     "totalStake": 120000,
     "bondedStake": 0,
-    "uptime": 98.99
+    "uptime": 95.99
   }
 ]

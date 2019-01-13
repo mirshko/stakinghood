@@ -1,0 +1,10 @@
+[data-reach-dialog-content] {
+  padding: 0;
+  max-width: 480px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 40rem) {
+  [data-reach-dialog-content] {
+  }
+}

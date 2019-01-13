@@ -3,10 +3,11 @@
   --system-ui: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
     sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   --brand: #161931;
-  --brand-opaque: rgba(22, 25, 49, 0.32);
-  --brand-transparent: rgba(22, 25, 49, 0.08);
+  --brand-hover: #353c4d;
+  --brand-opaque: #b4b5bd;
+  --brand-disabled: #d0d6d5;
+  --brand-light: #ededef;
   --green: #07ef9a;
-  --brand-light: #5e6ff3;
   --blue: #0e3ff2;
   --weight-regular: 400;
   --weight-medium: 500;

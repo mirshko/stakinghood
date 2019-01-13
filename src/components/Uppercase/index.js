@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Text = styled(RebassText)`
   text-transform: uppercase;
-  color: var(--brand-opaque);
+  color: ${props => (props.color ? props.color : "var(--brand-opaque)")};
   letter-spacing: 0.32px;
   font-weight: var(--weight-semibold);
 `;

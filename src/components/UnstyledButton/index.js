@@ -1,11 +1,29 @@
 import React from "react";
+import styled from "styled-components";
 
-import styles from "./index.module.css";
+const Button = styled.button`
+  all: unset;
+  display: block;
+  cursor: pointer;
+  width: ${props => (props.width ? props.width : "100%")};
 
-const UnstyledButton = ({ onClick, children }) => (
-  <button className={styles.button} onClick={onClick}>
+  & > * {
+    transition: opacity 0.125s ease;
+  }
+
+  &:hover > * {
+    opacity: 0.64;
+  }
+
+  // &:focus {
+  //   outline: -webkit-focus-ring-color auto 5px;
+  // }
+`;
+
+const UnstyledButton = ({ onClick, children, width }) => (
+  <Button width={width} onClick={onClick}>
     {children}
-  </button>
+  </Button>
 );
 
 export default UnstyledButton;

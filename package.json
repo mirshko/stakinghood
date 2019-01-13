@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "@mirshko",
   "dependencies": {
+    "@reach/dialog": "^0.1.2",
+    "@reach/visually-hidden": "^0.1.1",
     "gatsby": "^2.0.76",
     "gatsby-plugin-manifest": "^2.0.9",
     "gatsby-plugin-react-helmet": "^3.0.2",

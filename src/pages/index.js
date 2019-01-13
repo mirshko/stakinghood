@@ -7,45 +7,41 @@ import SEO from "../components/SEO";
 import Uppercase from "../components/Uppercase";
 import Panel from "../components/Panel";
 import Validator from "../components/Validator";
-import StakingContainer from "../components/StakingContainer";
-import EditStakePanel from "../components/EditStakePanel";
+import StateContainer from "../components/StateContainer";
+import StakeAdjustor from "../components/StakeAdjustor";
 import Tag from "../components/Tag";
-import UnstyledButton from "../components/UnstyledButton";
+import Modal from "../components/Modal";
+import EmptyState from "../components/EmptyState";
 
 const ATOMUSDValue = 5;
 
-class IndexPage extends React.Component {
+const findIndexBySymbol = (arr, symbol) =>
+  arr.findIndex(i => i.symbol === symbol);
+
+class Index extends React.Component {
   state = {
-    panelOpen: false,
+    modalOpen: false,
     activeIndex: 0
   };
 
-  openPanel = () => this.setState({ panelOpen: true });
-  closePanel = () => this.setState({ panelOpen: false });
-
+  openModal = () => this.setState({ modalOpen: true });
+  closeModal = () => this.setState({ modalOpen: false });
   updateActiveIndex = index => this.setState({ activeIndex: index });
-
-  renderPanel() {
-    if (this.state.panelOpen) {
-      return (
-        <EditStakePanel
-          onClose={() => this.closePanel()}
-          index={this.state.activeIndex}
-        />
-      );
-    }
-  }
 
   render() {
     return (
-      <Subscribe to={[StakingContainer]}>
-        {staking => {
-          const watchedValidators = staking.state.validators.filter(
-            validator => validator.bondedStake <= 0
-          ).sort((val1, val2) => val1.uptime + val2.uptime);
+      <Subscribe to={[StateContainer]}>
+        {app => {
+          const watchedValidators = app.state.validators
+            .filter(validator => validator.bondedStake <= 0)
+            .sort((val1, val2) => val1.uptime + val2.uptime);
+
+          const stakedValidators = app.state.validators.filter(
+            validator => validator.bondedStake > 0
+          );
 
           const stakeValue = (
-            staking.state.validators
+            app.state.validators
               .map(validator => validator.bondedStake)
               .reduce((sum, value) => sum + value) * ATOMUSDValue
           ).toLocaleString(undefined, { minimumFractionDigits: 2 });
@@ -71,7 +67,7 @@ class IndexPage extends React.Component {
                 <Box mb={40}>
                   <Tag>LIQUID STAKE</Tag>{" "}
                   <Text as="span" fontWeight="var(--weight-semibold)">
-                    {staking.state.liquidStake.toLocaleString()} ATOM
+                    {app.state.liquidStake.toLocaleString()} ATOM
                   </Text>
                 </Box>
 
@@ -79,18 +75,25 @@ class IndexPage extends React.Component {
                 <Heading mb={10} fontSize={[3, 4]} as="h2">
                   Bonded
                 </Heading>
-                {staking.state.validators
-                  .filter(validator => validator.bondedStake > 0)
-                  .map((validator, index) => (
-                    <UnstyledButton
+                {stakedValidators.length > 0 ? (
+                  stakedValidators.map((validator, index) => (
+                    <Validator
+                      key={index}
                       onClick={() => {
-                        this.openPanel();
-                        this.updateActiveIndex(index);
+                        this.openModal();
+                        this.updateActiveIndex(
+                          findIndexBySymbol(
+                            app.state.validators,
+                            validator.symbol
+                          )
+                        );
                       }}
-                    >
-                      <Validator key={index} {...validator} />
-                    </UnstyledButton>
-                  ))}
+                      {...validator}
+                    />
+                  ))
+                ) : (
+                  <EmptyState>You're not staking any validators</EmptyState>
+                )}
 
                 {/* Watchlist */}
                 <Box mb={10} mt={40}>
@@ -99,21 +102,39 @@ class IndexPage extends React.Component {
                   </Heading>
                   <Uppercase fontSize={1}>Uptime</Uppercase>
                 </Box>
-                {watchedValidators.map((validator, index) => {
-                  const isNotLast =
-                    watchedValidators.length !== index + 1 ? true : false;
 
-                  return (
-                    <Validator
-                      bottomBorder={isNotLast}
-                      key={index}
-                      {...validator}
-                    />
-                  );
-                })}
+                {watchedValidators.length > 0 ? (
+                  watchedValidators.map((validator, index) => {
+                    const isNotLast =
+                      watchedValidators.length !== index + 1 ? true : false;
+
+                    return (
+                      <Validator
+                        key={index}
+                        onClick={() => {
+                          this.openModal();
+                          this.updateActiveIndex(
+                            findIndexBySymbol(
+                              app.state.validators,
+                              validator.symbol
+                            )
+                          );
+                        }}
+                        bottomBorder={isNotLast}
+                        {...validator}
+                      />
+                    );
+                  })
+                ) : (
+                  <EmptyState>You're not watching any validators</EmptyState>
+                )}
               </Panel>
             </Layout>,
-            this.renderPanel()
+            this.state.modalOpen && (
+              <Modal onClose={() => this.closeModal()}>
+                <StakeAdjustor index={this.state.activeIndex} />
+              </Modal>
+            )
           ];
         }}
       </Subscribe>
@@ -121,10 +142,10 @@ class IndexPage extends React.Component {
   }
 }
 
-const Render = () => (
+const RenderIndex = () => (
   <Provider>
-    <IndexPage />
+    <Index />
   </Provider>
 );
 
-export default Render;
+export default RenderIndex;
