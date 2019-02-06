@@ -13,8 +13,8 @@ const Corner = () => (
       height="80"
       viewBox="0 0 250 250"
       style={{
-        fill: "#151513",
-        color: "#fff",
+        fill: "#161931",
+        color: "#f5f6f9",
         position: "absolute",
         top: 0,
         border: 0,
