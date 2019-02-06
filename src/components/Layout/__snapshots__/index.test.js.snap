@@ -2,6 +2,7 @@
 
 exports[`<Layout /> it works 1`] = `
 <Theme>
+  <Corner />
   <styled.div>
     <styled.div>
       <p>
