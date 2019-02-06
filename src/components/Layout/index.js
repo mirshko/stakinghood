@@ -7,6 +7,7 @@ import "typeface-inter";
 import "../../styles/global.css";
 
 import Theme from "../Theme";
+import Corner from "../Corner";
 
 const Container = styled.div`
   display: grid;
@@ -21,9 +22,12 @@ const Wrapper = styled.div`
 
 const Layout = ({ children }) => (
   <Theme>
-    <Container>
-      <Wrapper>{children}</Wrapper>
-    </Container>
+    <>
+      <Corner />
+      <Container>
+        <Wrapper>{children}</Wrapper>
+      </Container>
+    </>
   </Theme>
 );
 
